@@ -10,7 +10,7 @@ def read_path(file_pathname,file_out_pathname):
     for filename in os.listdir(file_pathname):
         #print(filename)
         img = cv2.imread(file_pathname+'/'+filename)
-        cropImg = img[0:769,0:1024]
+        cropImg = img[0:769,0:1024] #修改裁剪区域，先y方向，后x方向
         cv2.imwrite(image_output_path+'/'+filename,cropImg)
         #print(img)
     print('----------all works down----------')
